@@ -26,9 +26,14 @@ app.use("/api/users", userRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 
+app.get("/test-cors", (req, res) => {
+  res.json({ message: "CORS test working" });
+});
+
 app.get("/", (req, res) => {
   res.send("ProjectHub Backend Running");
 });
+
 
 const PORT = process.env.PORT || 5000;
 
