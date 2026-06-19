@@ -11,7 +11,7 @@ const db = require("./db");
 const app = express();
 
 app.use(cors());  
-app.options("*", cors());
+// app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
