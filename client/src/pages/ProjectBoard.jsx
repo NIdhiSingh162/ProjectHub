@@ -14,7 +14,7 @@ function ProjectBoard() {
     const [dueDate, setDueDate] = useState("");
 
     const getTasks = async () => {
-        const res = await axios.get("http://localhost:5000/api/tasks");
+        const res = await axios.get("http://https://projecthub-540n.onrender.com/api/tasks");
         const projectTasks = res.data.filter(
             (task) => task.project_id === Number(id)
         );
@@ -28,7 +28,7 @@ function ProjectBoard() {
     const handleAddTask = async (e) => {
         e.preventDefault();
 
-        await axios.post("http://localhost:5000/api/tasks", {
+        await axios.post("http://https://projecthub-540n.onrender.com/api/tasks", {
             project_id: Number(id),
             title,
             description,
@@ -47,7 +47,7 @@ function ProjectBoard() {
     };
 
     const updateStatus = async (taskId, newStatus) => {
-        await axios.put(`http://localhost:5000/api/tasks/${taskId}/status`, {
+        await axios.put(`http://https://projecthub-540n.onrender.com/api/tasks/${taskId}/status`, {
             status: newStatus,
         });
 
@@ -55,7 +55,7 @@ function ProjectBoard() {
     };
 
     const deleteTask = async (taskId) => {
-        await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+        await axios.delete(`http://https://projecthub-540n.onrender.com/api/tasks/${taskId}`);
         getTasks();
     };
 
