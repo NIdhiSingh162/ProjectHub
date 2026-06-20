@@ -32,7 +32,8 @@ app.use("/api/tasks", taskRoutes);
 
 
 app.get("/", (req, res) => {
-  res.send("ProjectHub Backend Running");
+  // res.send("ProjectHub Backend Running");
+  res.send("ProjectHub Backend Running Updated");
 });
 
 
