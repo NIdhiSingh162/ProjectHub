@@ -33,12 +33,12 @@ function Dashboard() {
   );
 
   const getProjects = async () => {
-    const res = await axios.get("https://projecthub-540n.onrender.com/api/projects");
+    const res = await axios.get("https://projecthub-backend-new.onrender.com/api/projects");
     setProjects(res.data);
   };
 
   const getTaskStats = async () => {
-    const res = await axios.get("https://projecthub-540n.onrender.com/api/tasks");
+    const res = await axios.get("https://projecthub-backend-new.onrender.com/api/tasks");
 
     setTotalTasks(res.data.length);
 
@@ -58,7 +58,7 @@ function Dashboard() {
   const handleCreateProject = async (e) => {
     e.preventDefault();
 
-    await axios.post("https://projecthub-540n.onrender.com/api/projects", {
+    await axios.post("https://projecthub-backend-new.onrender.com/api/projects", {
       title,
       description,
       created_by: user.id,
@@ -71,7 +71,7 @@ function Dashboard() {
   };
 
   const deleteProject = async (projectId) => {
-    await axios.delete(`https://projecthub-540n.onrender.com/api/projects/${projectId}`);
+    await axios.delete(`https://projecthub-backend-new.onrender.com/api/projects/${projectId}`);
     getProjects();
   };
 

@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://projecthub-540n.onrender.com/api/users/register", {
+      const res = await axios.post("https://projecthub-backend-new.onrender.com/api/users/register", {
         name,
         email,
         password,
