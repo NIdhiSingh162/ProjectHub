@@ -14,6 +14,8 @@ db.connect((err) => {
     console.log("MySQL Connection Failed:", err);
   } else {
     console.log("MySQL Connected Successfully");
+    console.log("Database Name:", process.env.DB_NAME);
+    console.log("Database Host:", process.env.DB_HOST);
   }
 });
 
