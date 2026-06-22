@@ -14,9 +14,11 @@ db.connect((err) => {
     console.log("MySQL Connection Failed:", err);
   } else {
     console.log("MySQL Connected Successfully");
+
     console.log("Database Name:", process.env.DB_NAME);
     console.log("Database Host:", process.env.DB_HOST);
 
+    // Users Table
     db.query(`
       CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,6 +30,7 @@ db.connect((err) => {
       )
     `);
 
+    // Projects Table
     db.query(`
       CREATE TABLE IF NOT EXISTS projects (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,6 +41,7 @@ db.connect((err) => {
       )
     `);
 
+    // Tasks Table
     db.query(`
       CREATE TABLE IF NOT EXISTS tasks (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,11 +51,22 @@ db.connect((err) => {
         assigned_to VARCHAR(100),
         priority VARCHAR(20),
         status VARCHAR(50),
+        due_date DATE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
 
-    console.log("Tables checked/created successfully");
+    // Agar table pehle se hai to due_date add kar dega
+    db.query(
+      "ALTER TABLE tasks ADD COLUMN due_date DATE",
+      (err) => {
+        if (err && err.code !== "ER_DUP_FIELDNAME") {
+          console.log("due_date column error:", err);
+        } else {
+          console.log("due_date column checked/created successfully");
+        }
+      }
+    );
   }
 });
 
