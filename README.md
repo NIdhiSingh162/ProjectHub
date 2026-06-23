@@ -1,34 +1,49 @@
 # ProjectHub
 
-ProjectHub is a Project Management Web Application built using React, Node.js, Express.js and MySQL.
+A full-stack Project Management Web Application built using React.js, Node.js, Express.js, and MySQL. ProjectHub helps users manage projects, organize tasks, track progress, and improve productivity through an intuitive dashboard.
 
-## Features
+## 🚀 Live Demo
 
-- User Registration & Login
-- Create Projects
-- Delete Projects
-- Search Projects
-- Create Tasks
-- Update Task Status
-- Delete Tasks
-- Progress Tracking
-- Due Date Management
-- Dashboard Analytics
+https://project-rcv8bawb8-nidhi-singh.vercel.app
 
-## Tech Stack
+## ✨ Features
 
-Frontend:
-- React
-- Tailwind CSS
-- Axios
+* User Registration & Login
+* Create and Delete Projects
+* Search Projects
+* Create, Update and Delete Tasks
+* Task Status Management (To Do, In Progress, Completed)
+* Due Date Tracking
+* Project Progress Analytics
+* Dashboard Statistics
+* Responsive Design
 
-Backend:
-- Node.js
-- Express.js
+## 🛠️ Tech Stack
 
-Database:
-- MySQL
+### Frontend
 
-## Author
+* React.js
+* Tailwind CSS
+* Axios
 
-Nidhi Singh
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MySQL
+
+## 📸 Project Screenshots
+
+* Registration Page
+* Login Page
+* Dashboard Analytics
+* Projects Management
+* Task Board (To Do, In Progress, Completed)
+
+## 👩‍💻 Author
+
+**Nidhi Singh**
+B.Tech IT Student | Full Stack Developer
